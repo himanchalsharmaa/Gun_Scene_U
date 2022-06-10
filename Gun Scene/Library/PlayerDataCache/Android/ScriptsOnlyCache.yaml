@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - OnCollisionStick
     - UnityTemplateProjects.SimpleCameraController
     - VRInputCameraControl
     Oculus.VR.Editor.dll:
@@ -255,6 +256,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 10374}
     - Class: 114
       Script: {instanceID: 10456}
+    - Class: 114
+      Script: {instanceID: 48884}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -4116,6 +4119,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: OculusSampleFramework
     className: TrackSegment
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: OnCollisionStick
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
