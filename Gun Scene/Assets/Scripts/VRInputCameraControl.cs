@@ -32,7 +32,7 @@ public class VRInputCameraControl : MonoBehaviour
         else if(leftright.y<0){
             destination1=transform.position-a*transform.forward;
         }
-        transform.position=Vector3.Lerp(transform.position,destination1, 0.1f);
+        transform.position=Vector3.Lerp(transform.position,destination1, 0.05f);
         if(leftright.x>0){
             //obj1.transform.rotation=Quaternion.FromToRotation(Vector3.up, transform.forward);
             //obj2.transform.rotation=Quaternion.FromToRotation(Vector3.up,Vector3.Cross(transform.forward,new Vector3(0,transform.position.y,0)));
@@ -47,11 +47,11 @@ public class VRInputCameraControl : MonoBehaviour
             //inpurcheck.text=""+Quaternion.Angle(obj1.transform.rotation,obj2.transform.rotation);
             destination2=transform.position+b*Vector3.Normalize(Vector3.Cross(transform.forward,new Vector3(0,Mathf.Abs(transform.position.y),0)));
         }
-        transform.position=Vector3.Lerp(transform.position,destination2, 0.1f);
+        transform.position=Vector3.Lerp(transform.position,destination2, 0.05f);
         }
         Vector2 updown=OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick);
         Vector3 destination3 = new Vector3(transform.position.x,transform.position.y+updown.y,transform.position.z);
-        transform.position=Vector3.Lerp(transform.position, destination3, 0.1f);
+        transform.position=Vector3.Lerp(transform.position, destination3, 0.05f);
         transform.Rotate(0,updown.x,0,Space.World);
     }
 }
